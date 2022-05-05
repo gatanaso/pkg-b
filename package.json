@@ -1,8 +1,13 @@
 {
-  "name": "pkg-b",
+  "name": "@gatanaso/pkg-b",
   "version": "0.1.0",
   "description": "A test package B",
   "main": "index.js",
   "license": "MIT",
-  "private": true
+  "scripts": {
+    "build": "echo building..."
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
