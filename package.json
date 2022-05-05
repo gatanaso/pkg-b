@@ -5,9 +5,15 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "echo building..."
+    "build": "echo building...",
+    "release:major": "release-it --ci",
+    "release:minor": "release-it --minor --ci",
+    "release:patch": "release-it --patch --ci"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "release-it": "^15.0.0"
   }
 }
