@@ -26,7 +26,7 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
           scope: "@gatanaso"
-      - name: git config
+      - name: Git config
         run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
@@ -34,7 +34,11 @@ jobs:
         run: yarn cache clean
       - name: Install dependencies
         run: yarn install
-      - name: Release IT
+      - name: Release to GitHub
         run: yarn run release:${{ github.event.inputs.version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish package to GitHub Packages
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
