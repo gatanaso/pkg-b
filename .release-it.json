@@ -3,7 +3,7 @@
   "git": {
     "commitMessage": "Release v${version}",
     "tagAnnotation": "Release v${version}",
-    "tagName": "${version}"
+    "tagName": "v${version}"
   },
   "github": {
     "release": true,
