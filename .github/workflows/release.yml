@@ -36,8 +36,8 @@ jobs:
           scope: "@gatanaso"
       - name: Git config
         run: |
-          git config user.name $GITHUB_ACTOR
-          git config user.email $GITHUB_ACTOR@users.noreply.github.com
+          git config user.name ${{GITHUB_ACTOR}}
+          git config user.email ${{GITHUB_ACTOR}}@users.noreply.github.com
       - name: Clean 'yarn' cache
         run: yarn cache clean
       - name: Install dependencies
