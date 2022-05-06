@@ -28,9 +28,6 @@ jobs:
         uses: webfactory/ssh-agent@v0.5.4
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - run: |
-          ssh-add -l
-          ssh -T git@github.com
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
@@ -39,6 +36,7 @@ jobs:
           scope: "@gatanaso"
       - name: Git config
         run: |
+          ssh-add -l 
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
       - name: Clean 'yarn' cache
