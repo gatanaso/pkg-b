@@ -43,9 +43,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Release to GitHub
-        run: |
-          ssh-add -l
-          yarn run release:${{ github.event.inputs.version }}
+        run: yarn run release:${{ github.event.inputs.version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish package to GitHub Packages
