@@ -2,7 +2,8 @@
   "npm": false,
   "git": {
     "commitMessage": "Release v${version}",
-    "tagAnnotation": "Release v${version}"
+    "tagAnnotation": "Release v${version}",
+    "tagName": "${version}"
   },
   "github": {
     "release": true,
