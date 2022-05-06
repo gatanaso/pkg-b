@@ -1,6 +1,6 @@
 {
   "name": "@gatanaso/pkg-b",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A test package B",
   "main": "index.js",
   "license": "MIT",
@@ -14,6 +14,7 @@
     "registry": "https://npm.pkg.github.com"
   },
   "devDependencies": {
+    "@release-it/bumper": "^4.0.0",
     "release-it": "^15.0.0"
   }
 }

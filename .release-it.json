@@ -1,11 +1,17 @@
 {
+  "npm": false,
   "git": {
     "commitMessage": "Release v${version}",
     "tagAnnotation": "Release v${version}"
   },
-  "npm": false,
   "github": {
     "release": true,
     "releaseName": "Release v${version}"
+  },
+  "plugins": {
+    "@release-it/bumper": {
+      "in": "package.json",
+      "out": "package.json"
+    }
   }
 }
