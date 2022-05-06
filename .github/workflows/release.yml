@@ -28,6 +28,9 @@ jobs:
         uses: webfactory/ssh-agent@v0.5.4
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - run: |
+          ssh-add -latest
+          ssh -T git@github.com
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
