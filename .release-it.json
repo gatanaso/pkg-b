@@ -1,7 +1,7 @@
 {
   "npm": false,
   "git": {
-    "commitMessage": "Release v${version}",
+    "commitMessage": "[automated commit] Release v${version}",
     "tagAnnotation": "Release v${version}",
     "tagName": "v${version}"
   },
