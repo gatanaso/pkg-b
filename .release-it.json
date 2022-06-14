@@ -1,6 +1,7 @@
 {
   "npm": false,
   "git": {
+    "push": false,
     "commitMessage": "[automated commit] Release v${version}",
     "tagAnnotation": "Release v${version}",
     "tagName": "v${version}"
@@ -14,5 +15,8 @@
       "in": "package.json",
       "out": "package.json"
     }
+  },
+  "hooks": {
+    "after:git:release": "git checkout -b auto/release-${version} && git add . && git push -u origin"
   }
 }
