@@ -1,21 +1,11 @@
 {
   "npm": false,
-  "git": {
-    "push": false,
-    "commitMessage": "[automated commit] Release v${version}",
-    "tagAnnotation": "Release v${version}",
-    "tagName": "v${version}"
-  },
+  "git": false,
   "github": {
     "release": true,
     "releaseName": "Release v${version}"
   },
-  "plugins": {
-    "@release-it/bumper": {
-      "in": "package.json",
-      "out": "package.json"
-    }
-  },
+  "plugins": {},
   "hooks": {
     "before:release": "echo Before release ${name} v${version} to ${repo.repository}.",
     "after:release": "echo After release ${name} v${version} to ${repo.repository}."

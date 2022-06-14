@@ -42,6 +42,8 @@ jobs:
         run: yarn cache clean
       - name: Install dependencies
         run: yarn install
+      - name: Bump version
+        run: yarn version --${{github.event.inputs.version}}
       - name: Publish package to GitHub Packages
         run: yarn publish
         env:
