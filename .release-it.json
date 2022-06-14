@@ -17,7 +17,7 @@
     }
   },
   "hooks": {
-    "before:release": "git checkout -b release/${version}",
-    "after:release": "git push -u origin release/${version}"
+    "before:release": "echo Before release ${name} v${version} to ${repo.repository}.",
+    "after:release": "echo After release ${name} v${version} to ${repo.repository}."
   }
 }

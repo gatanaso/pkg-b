@@ -42,11 +42,11 @@ jobs:
         run: yarn cache clean
       - name: Install dependencies
         run: yarn install
-      - name: Release to GitHub
-        run: yarn release:${{ github.event.inputs.version }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish package to GitHub Packages
         run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Release to GitHub
+        run: yarn release:${{ github.event.inputs.version }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
