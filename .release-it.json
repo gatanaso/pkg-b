@@ -17,7 +17,7 @@
     }
   },
   "hooks": {
-    "after:git:release": "echo AFTER GIT PUSH BEFORE GITHUB RELEASE",
+    "before:release": "echo BEFORE RELEASE",
     "after:release": "echo *******Successfully released ${name} v${version} to ${repo.repository}."
   }
 }
