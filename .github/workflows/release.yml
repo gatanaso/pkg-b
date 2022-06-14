@@ -43,7 +43,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Bump version
-        run: yarn version --${{github.event.inputs.version}}
+        run: yarn version --${{github.event.inputs.version}} --no-git-tag-version
       - name: Publish package to GitHub Packages
         run: yarn publish
         env:

@@ -13,7 +13,7 @@
     "release:premajor": "release-it -- premajor --ci",
     "release:preminor": "release-it -- preminor --ci",
     "release:prepatch": "release-it -- prepatch --ci",
-    "release:prerelease": "release-it -- prerelease --ci"
+    "release:prerelease": "release-it -- prerelease --no-increment --ci"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
