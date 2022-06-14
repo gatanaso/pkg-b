@@ -2,6 +2,7 @@
   "npm": false,
   "git": {
     "push": false,
+    "requireCleanWorkingDir": false
     "commitMessage": "[automated commit] Release v${version}",
     "tagAnnotation": "Release v${version}",
     "tagName": "v${version}"
