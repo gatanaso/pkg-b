@@ -17,6 +17,6 @@
     }
   },
   "hooks": {
-    "after:git:release": "git checkout -b auto/release-${version} && git add . && git push -u origin"
+    "after:git:release": "echo AFTER GIT PUSH BEFORE GITHUB RELEASE"
   }
 }
