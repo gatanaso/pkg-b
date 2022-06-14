@@ -27,6 +27,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          token: ${{ secrets.PAT }}
           ref: main
       - name: Setup Node
         uses: actions/setup-node@v2
@@ -42,12 +43,10 @@ jobs:
         run: yarn cache clean
       - name: Install dependencies
         run: yarn install
-      - name: Bump version and create tag
-        run: yarn version --${{github.event.inputs.version}}
-      - name: Commit package.json
-        run: |
-          (git commit -am '[automated commit] Bump version') || true
-          (git push) || true
+      - name: Release to GitHub
+        run: yarn release:${{ github.event.inputs.version }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish package to GitHub Packages
         run: yarn publish
         env:

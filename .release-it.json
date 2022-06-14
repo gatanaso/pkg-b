@@ -1,8 +1,6 @@
 {
   "npm": false,
   "git": {
-    "push": false,
-    "requireCleanWorkingDir": false,
     "commitMessage": "[automated commit] Release v${version}",
     "tagAnnotation": "Release v${version}",
     "tagName": "v${version}"
@@ -11,9 +9,10 @@
     "release": true,
     "releaseName": "Release v${version}"
   },
-  "plugins": {},
-  "hooks": {
-    "before:release": "echo Before release ${name} v${version} to ${repo.repository}.",
-    "after:release": "echo After release ${name} v${version} to ${repo.repository}."
+  "plugins": {
+    "@release-it/bumper": {
+      "in": "package.json",
+      "out": "package.json"
+    }
   }
 }
