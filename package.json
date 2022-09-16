@@ -6,14 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "echo building...",
-    "test": "echo testing...",
-    "release:major": "release-it -- major --ci",
-    "release:minor": "release-it -- minor --ci",
-    "release:patch": "release-it -- patch --ci",
-    "release:premajor": "release-it -- premajor --ci",
-    "release:preminor": "release-it -- preminor --ci",
-    "release:prepatch": "release-it -- prepatch --ci",
-    "release:prerelease": "release-it -- prerelease --ci"
+    "test": "echo testing..."
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
