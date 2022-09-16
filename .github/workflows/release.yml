@@ -44,7 +44,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Release to GitHub
-        run: yarn release-it -- ${{ github.event.inputs.version }} --ci
+        run: release-it -- ${{ github.event.inputs.version }} --ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish package to GitHub Packages
