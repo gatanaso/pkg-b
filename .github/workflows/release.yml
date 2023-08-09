@@ -44,7 +44,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Release to GitHub
-        run: yarn release-it --ci --release-version=v0.2.1-6.hotfix.3
+        run: yarn release-it --ci --tag=0.2.1-6.hotfix.4 --no-increment v0.2.1-6.hotfix.4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish package to GitHub Packages
