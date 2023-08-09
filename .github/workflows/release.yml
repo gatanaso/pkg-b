@@ -6,7 +6,7 @@ on:
       version:
         type: choice
         description: "Major, minor or patch?"
-        required: true
+        required: false
         options:
           - prerelease
           - premajor
@@ -28,7 +28,7 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.PAT }}
-          ref: main
+          ref: hotfix/test-hotfix-release
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
@@ -44,7 +44,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Release to GitHub
-        run: yarn release-it -- ${{ github.event.inputs.version }} --ci
+        run: yarn release-it --no-increment --ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish package to GitHub Packages
