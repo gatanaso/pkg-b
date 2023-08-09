@@ -1,1 +1,1 @@
-console.log("Hello from package B!");
+console.log("Hello from package B! This is a hotfix.");
